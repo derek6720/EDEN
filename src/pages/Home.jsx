@@ -1,18 +1,22 @@
+import Hero from '../components/sections/Hero';
+import ServicesOverview from '../components/sections/ServicesOverview';
+import AboutMission from '../components/sections/AboutMission';
+import CoursesPreview from '../components/sections/CoursesPreview';
+import TestimonialsPreview from '../components/sections/TestimonialsPreview';
+import CTABanner from '../components/sections/CTABanner';
+
 /**
- * Homepage — scrollable landing page with section previews.
- * Sections will be added incrementally in Phase 3.
+ * Homepage — scrollable landing page with all section previews.
  */
 export default function Home() {
   return (
     <div className="page page--home">
-      <div style={{ 
-        minHeight: '100vh', 
-        display: 'flex', 
-        alignItems: 'center', 
-        justifyContent: 'center' 
-      }}>
-        <h1>Eden Prosperity</h1>
-      </div>
+      <Hero />
+      <ServicesOverview />
+      <AboutMission />
+      <CoursesPreview />
+      <TestimonialsPreview />
+      <CTABanner />
     </div>
   );
 }

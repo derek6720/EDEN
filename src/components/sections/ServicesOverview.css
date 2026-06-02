@@ -1,0 +1,28 @@
+.services-overview__header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.services-overview__title {
+  margin-bottom: var(--space-4);
+}
+
+.services-overview__subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.services-overview__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+@media (max-width: 768px) {
+  .services-overview__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}

@@ -1,0 +1,59 @@
+import Button from './Button';
+import './CourseCard.css';
+
+/**
+ * Course card component for displaying a course offering.
+ * Designed to be pluggable — onPurchase prop allows future payment integration.
+ *
+ * @param {object} props
+ * @param {string} props.title - Course name
+ * @param {string} props.description - Course description
+ * @param {string} props.price - Display price (e.g. "$197")
+ * @param {string} [props.image] - Course cover image URL
+ * @param {string[]} [props.highlights] - Key selling points
+ * @param {function} [props.onPurchase] - Future payment handler
+ */
+export default function CourseCard({
+  title,
+  description,
+  price,
+  image,
+  highlights = [],
+  onPurchase,
+}) {
+  return (
+    <div className="course-card">
+      {image && (
+        <div className="course-card__image-wrap">
+          <img src={image} alt={title} className="course-card__image" />
+        </div>
+      )}
+      <div className="course-card__content">
+        <h3 className="course-card__title">{title}</h3>
+        <p className="course-card__description">{description}</p>
+
+        {highlights.length > 0 && (
+          <ul className="course-card__highlights">
+            {highlights.map((item, i) => (
+              <li key={i} className="course-card__highlight">
+                <span className="course-card__highlight-dot" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        )}
+
+        <div className="course-card__footer">
+          <span className="course-card__price">{price}</span>
+          <Button
+            variant="primary"
+            size="sm"
+            onClick={onPurchase}
+          >
+            Enroll Now
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+}

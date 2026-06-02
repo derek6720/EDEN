@@ -25,8 +25,23 @@
   --color-white: #FFFFFF;
   --color-white-rgb: 255, 255, 255;
   --color-light: #F8FAFC;
-  --color-muted: #94A3B8;
-  --color-muted-light: #CBD5E1;
+  --color-muted: #64748B;
+  --color-muted-light: #94A3B8;
+
+  /* Page backgrounds (light mode) */
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #F8FAFC;
+  --color-bg-surface: #F1F5F9;
+  --color-bg-rgb: 255, 255, 255;
+
+  /* Text on light backgrounds */
+  --color-text: #0F172A;
+  --color-text-secondary: #475569;
+  --color-text-muted: #64748B;
+
+  /* Borders on light backgrounds */
+  --color-border: #E2E8F0;
+  --color-border-light: #F1F5F9;
 
   --color-accent: #F59E0B;
   --color-accent-light: #FBBF24;

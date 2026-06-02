@@ -4,15 +4,15 @@
 
 .footer {
   background-color: var(--color-dark-surface);
-  border-top: 1px solid rgba(var(--color-white-rgb), 0.06);
-  margin-top: auto;
+  border-top: none;
+  margin-top: 0;
 }
 
 .footer__inner {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr;
   gap: var(--space-12);
-  padding: var(--space-16) var(--space-6);
+  padding: var(--space-16) var(--space-6) var(--space-12);
 }
 
 /* ---- Brand ---- */

@@ -29,7 +29,7 @@
 }
 
 .fade-in {
-  animation: fadeIn var(--transition-slow) ease forwards;
+  animation: fadeIn var(--transition-slow) forwards;
 }
 
 /* ---- Fade Up ---- */
@@ -45,7 +45,7 @@
 }
 
 .fade-up {
-  animation: fadeUp var(--transition-slow) ease forwards;
+  animation: fadeUp var(--transition-slow) forwards;
 }
 
 .fade-up-delay-1 { animation-delay: 100ms; opacity: 0; }
@@ -66,7 +66,7 @@
 }
 
 .fade-in-scale {
-  animation: fadeInScale var(--transition-slow) ease forwards;
+  animation: fadeInScale var(--transition-slow) forwards;
 }
 
 /* ---- Slide In Left ---- */
@@ -82,7 +82,7 @@
 }
 
 .slide-in-left {
-  animation: slideInLeft var(--transition-slow) ease forwards;
+  animation: slideInLeft var(--transition-slow) forwards;
 }
 
 /* ---- Slide In Right ---- */
@@ -98,7 +98,7 @@
 }
 
 .slide-in-right {
-  animation: slideInRight var(--transition-slow) ease forwards;
+  animation: slideInRight var(--transition-slow) forwards;
 }
 
 /* ---- Pulse Glow ---- */
