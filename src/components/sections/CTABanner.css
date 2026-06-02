@@ -27,10 +27,6 @@
 }
 
 .cta-banner__title .text-gradient {
-  background: none;
-  -webkit-background-clip: unset;
-  -webkit-text-fill-color: var(--color-secondary-light);
-  background-clip: unset;
   color: var(--color-secondary-light);
 }
 

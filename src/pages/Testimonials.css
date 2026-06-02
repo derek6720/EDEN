@@ -1,0 +1,89 @@
+/* ============================================
+   TESTIMONIALS PAGE — UNIQUE STYLES
+   ============================================ */
+
+/* ---- Hero: Dark with featured quote ---- */
+.testimonials-hero {
+  position: relative;
+  padding-top: calc(var(--nav-height) + var(--space-16));
+  padding-bottom: var(--space-16);
+  background-color: var(--color-dark-surface);
+  overflow: hidden;
+}
+
+.testimonials-hero__inner {
+  position: relative;
+  z-index: var(--z-base);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+/* Decorative large quote mark */
+.testimonials-hero__quote-mark {
+  font-size: 120px;
+  line-height: 0.6;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: rgba(var(--color-secondary-rgb), 0.15);
+  user-select: none;
+}
+
+.testimonials-hero__featured-quote {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-white);
+  line-height: var(--line-height-relaxed);
+  max-width: 700px;
+  font-style: italic;
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+.testimonials-hero__stars {
+  display: flex;
+  gap: var(--space-1);
+  color: var(--color-accent);
+  font-size: var(--font-size-xl);
+}
+
+.testimonials-hero__author {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.testimonials-hero__name {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+}
+
+.testimonials-hero__role {
+  font-size: var(--font-size-sm);
+  color: var(--color-muted);
+}
+
+/* Section label above grid */
+.testimonials-section__label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wider);
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .testimonials-hero__quote-mark {
+    font-size: 80px;
+  }
+
+  .testimonials-hero__featured-quote {
+    font-size: var(--font-size-lg);
+  }
+}

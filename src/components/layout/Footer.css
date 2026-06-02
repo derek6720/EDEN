@@ -12,7 +12,7 @@
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr;
   gap: var(--space-12);
-  padding: var(--space-16) var(--space-6) var(--space-12);
+  padding: var(--space-16) var(--space-10) var(--space-12);
 }
 
 /* ---- Brand ---- */
@@ -98,7 +98,7 @@
 /* ---- Bottom Bar ---- */
 .footer__bottom {
   border-top: 1px solid rgba(var(--color-white-rgb), 0.06);
-  padding: var(--space-6) 0;
+  padding: var(--space-6) var(--space-10);
 }
 
 .footer__bottom-inner {

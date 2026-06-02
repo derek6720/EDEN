@@ -1,22 +1,98 @@
-import PageHero from '../components/ui/PageHero';
 import SectionWrapper from '../components/ui/SectionWrapper';
-import ServiceCard from '../components/ui/ServiceCard';
 import Button from '../components/ui/Button';
-import { Banknote, Clock, FileCheck, ShieldCheck, BadgeDollarSign } from 'lucide-react';
+import { Banknote, Clock, FileCheck, ShieldCheck, BadgeDollarSign, CreditCard, Building2 } from 'lucide-react';
 import flyerImg from '../assets/flyer-business-loan.jpg';
+import './BusinessLoans.css';
 
 /**
- * Business Loans dedicated page — details on loan offerings.
+ * Business Loans dedicated page.
+ * Unique dark-purple hero with stat cards + horizontal loan-type cards.
  */
 export default function BusinessLoans() {
   return (
     <div className="page page--business-loans">
-      <PageHero
-        title="Business Loans"
-        subtitle="Access capital to grow your business with competitive rates, flexible terms, and same-day approval."
-      />
+      {/* ---- UNIQUE HERO: Dark purple with stat cards ---- */}
+      <section className="loans-hero" id="loans-hero">
+        <div className="loans-hero__inner container">
+          <div className="loans-hero__content">
+            <p className="loans-hero__eyebrow">Business Loans</p>
+            <h1 className="loans-hero__title">
+              Access Capital to{' '}
+              <span className="text-gradient">Grow Your Business</span>
+            </h1>
+            <p className="loans-hero__subtitle">
+              Competitive rates, flexible terms, and same-day approval.
+              Get the funding you need without the hassle.
+            </p>
+            <Button variant="primary" size="lg" href="/contact">
+              Apply Now
+            </Button>
+          </div>
 
-      {/* Loan highlights */}
+          <div className="loans-hero__stats">
+            <div className="loans-hero__stat-card">
+              <span className="loans-hero__stat-value">$20M+</span>
+              <span className="loans-hero__stat-label">Available Funding</span>
+            </div>
+            <div className="loans-hero__stat-card">
+              <span className="loans-hero__stat-value">Same Day</span>
+              <span className="loans-hero__stat-label">Approval Speed</span>
+            </div>
+            <div className="loans-hero__stat-card">
+              <span className="loans-hero__stat-value">No Minimum</span>
+              <span className="loans-hero__stat-label">Credit Score Required</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ---- Loan Types: Horizontal cards ---- */}
+      <SectionWrapper id="loan-types" bg="surface">
+        <div className="section-header-center">
+          <h2>Types of <span className="text-gradient">Loans</span></h2>
+          <p>We offer a wide range of financing options for every stage of your business.</p>
+        </div>
+        <div className="grid-3">
+          <div className="loan-type-card">
+            <div className="loan-type-card__icon">
+              <Banknote size={28} />
+            </div>
+            <div className="loan-type-card__content">
+              <h3 className="loan-type-card__title">Term Loans</h3>
+              <p className="loan-type-card__text">
+                Traditional business loans with fixed repayment schedules. Ideal for large
+                investments, equipment purchases, or expansion projects.
+              </p>
+            </div>
+          </div>
+          <div className="loan-type-card">
+            <div className="loan-type-card__icon">
+              <CreditCard size={28} />
+            </div>
+            <div className="loan-type-card__content">
+              <h3 className="loan-type-card__title">Lines of Credit</h3>
+              <p className="loan-type-card__text">
+                Flexible revolving credit you can draw from as needed. Perfect for managing
+                cash flow, seasonal expenses, or unexpected opportunities.
+              </p>
+            </div>
+          </div>
+          <div className="loan-type-card">
+            <div className="loan-type-card__icon">
+              <Building2 size={28} />
+            </div>
+            <div className="loan-type-card__content">
+              <h3 className="loan-type-card__title">SBA Loans</h3>
+              <p className="loan-type-card__text">
+                Government-backed loans with favorable terms and lower interest rates. We
+                help you navigate the application process from start to finish.
+              </p>
+            </div>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* ---- Details Section ---- */}
       <SectionWrapper id="loan-details" bg="transparent">
         <div className="page-two-col">
           <div className="page-two-col__content">
@@ -59,34 +135,6 @@ export default function BusinessLoans() {
               className="page-two-col__image"
             />
           </div>
-        </div>
-      </SectionWrapper>
-
-      {/* Loan types */}
-      <SectionWrapper id="loan-types" bg="surface">
-        <div className="section-header-center">
-          <h2>Types of <span className="text-gradient">Loans</span></h2>
-          <p>We offer a wide range of financing options for every stage of your business.</p>
-        </div>
-        <div className="grid-3">
-          <ServiceCard
-            icon={<Banknote size={28} />}
-            title="Term Loans"
-            description="Traditional business loans with fixed repayment schedules. Ideal for large investments, equipment purchases, or expansion projects."
-            to="/contact"
-          />
-          <ServiceCard
-            icon={<Banknote size={28} />}
-            title="Lines of Credit"
-            description="Flexible revolving credit you can draw from as needed. Perfect for managing cash flow, seasonal expenses, or unexpected opportunities."
-            to="/contact"
-          />
-          <ServiceCard
-            icon={<Banknote size={28} />}
-            title="SBA Loans"
-            description="Government-backed loans with favorable terms and lower interest rates. We help you navigate the application process from start to finish."
-            to="/contact"
-          />
         </div>
       </SectionWrapper>
     </div>

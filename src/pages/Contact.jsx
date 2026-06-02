@@ -1,73 +1,140 @@
-import PageHero from '../components/ui/PageHero';
 import SectionWrapper from '../components/ui/SectionWrapper';
 import Button from '../components/ui/Button';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 import './Contact.css';
 
 /**
- * Contact dedicated page — inquiry form and contact info.
- * Form is visual-only (non-functional) until backend is connected.
+ * Custom Instagram SVG icon since lucide-react v1.x removed brand icons.
+ */
+function InstagramIcon({ size = 20 }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+  );
+}
+
+/**
+ * Contact dedicated page.
+ * Unique warm hero with inline contact cards + centered form below.
  */
 export default function Contact() {
   return (
     <div className="page page--contact">
-      <PageHero
-        title="Contact Us"
-        subtitle="Ready to get started? Reach out and let's talk about how we can help you achieve your goals."
-      />
+      {/* ---- UNIQUE HERO: Warm with inline contact cards ---- */}
+      <section className="contact-hero" id="contact-hero">
+        <div className="contact-hero__inner container">
+          <h1 className="contact-hero__title">Let&apos;s Talk</h1>
+          <p className="contact-hero__subtitle">
+            Ready to get started? Reach out and let&apos;s discuss how we can help
+            you achieve your financial goals.
+          </p>
 
+          <div className="contact-hero__cards">
+            <a
+              href="mailto:EdenProsperityLLC@Gmail.com"
+              className="contact-hero__card"
+            >
+              <Mail size={24} className="contact-hero__card-icon" />
+              <span className="contact-hero__card-label">Email</span>
+              <span className="contact-hero__card-value">
+                EdenProsperityLLC@Gmail.com
+              </span>
+            </a>
+
+            <a
+              href="https://instagram.com/_K_C_BIG"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-hero__card"
+            >
+              <InstagramIcon size={24} />
+              <span className="contact-hero__card-label">Instagram</span>
+              <span className="contact-hero__card-value">@_K_C_BIG</span>
+            </a>
+
+            <div className="contact-hero__card">
+              <MapPin size={24} className="contact-hero__card-icon" />
+              <span className="contact-hero__card-label">Service Area</span>
+              <span className="contact-hero__card-value">Nationwide — USA</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ---- Contact Form ---- */}
       <SectionWrapper id="contact-form" bg="transparent">
-        <div className="contact-layout">
-          {/* Contact Form */}
+        <div className="contact-form-wrapper">
+          <div className="contact-form-header">
+            <h2>Send Us a Message</h2>
+            <p>Fill out the form below and we&apos;ll get back to you shortly.</p>
+          </div>
+
           <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
-            <div className="contact-form__group">
-              <label htmlFor="contact-name" className="contact-form__label">
-                Full Name
-              </label>
-              <input
-                type="text"
-                id="contact-name"
-                className="contact-form__input"
-                placeholder="Your full name"
-              />
+            <div className="contact-form__row">
+              <div className="contact-form__group">
+                <label htmlFor="contact-name" className="contact-form__label">
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  className="contact-form__input"
+                  placeholder="Your full name"
+                />
+              </div>
+
+              <div className="contact-form__group">
+                <label htmlFor="contact-email" className="contact-form__label">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  className="contact-form__input"
+                  placeholder="you@example.com"
+                />
+              </div>
             </div>
 
-            <div className="contact-form__group">
-              <label htmlFor="contact-email" className="contact-form__label">
-                Email Address
-              </label>
-              <input
-                type="email"
-                id="contact-email"
-                className="contact-form__input"
-                placeholder="you@example.com"
-              />
-            </div>
+            <div className="contact-form__row">
+              <div className="contact-form__group">
+                <label htmlFor="contact-phone" className="contact-form__label">
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="contact-phone"
+                  className="contact-form__input"
+                  placeholder="(555) 123-4567"
+                />
+              </div>
 
-            <div className="contact-form__group">
-              <label htmlFor="contact-phone" className="contact-form__label">
-                Phone Number
-              </label>
-              <input
-                type="tel"
-                id="contact-phone"
-                className="contact-form__input"
-                placeholder="(555) 123-4567"
-              />
-            </div>
-
-            <div className="contact-form__group">
-              <label htmlFor="contact-service" className="contact-form__label">
-                Service Interested In
-              </label>
-              <select id="contact-service" className="contact-form__input">
-                <option value="">Select a service...</option>
-                <option value="business-loans">Business Loans</option>
-                <option value="business-funding">Business Funding</option>
-                <option value="credit-repair">Credit Repair</option>
-                <option value="courses">Courses</option>
-                <option value="other">Other</option>
-              </select>
+              <div className="contact-form__group">
+                <label htmlFor="contact-service" className="contact-form__label">
+                  Service Interested In
+                </label>
+                <select id="contact-service" className="contact-form__input">
+                  <option value="">Select a service...</option>
+                  <option value="business-loans">Business Loans</option>
+                  <option value="business-funding">Business Funding</option>
+                  <option value="credit-repair">Credit Repair</option>
+                  <option value="courses">Courses</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
             </div>
 
             <div className="contact-form__group">
@@ -86,44 +153,6 @@ export default function Contact() {
               Send Message
             </Button>
           </form>
-
-          {/* Contact Info Sidebar */}
-          <aside className="contact-info">
-            <h3 className="contact-info__title">Get In Touch</h3>
-
-            <div className="contact-info__item">
-              <Mail size={20} className="contact-info__icon" />
-              <div>
-                <p className="contact-info__label">Email</p>
-                <a href="mailto:EdenProsperityLLC@Gmail.com" className="contact-info__value">
-                  EdenProsperityLLC@Gmail.com
-                </a>
-              </div>
-            </div>
-
-            <div className="contact-info__item">
-              <Phone size={20} className="contact-info__icon" />
-              <div>
-                <p className="contact-info__label">Instagram</p>
-                <a
-                  href="https://instagram.com/_K_C_BIG"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="contact-info__value"
-                >
-                  @_K_C_BIG
-                </a>
-              </div>
-            </div>
-
-            <div className="contact-info__item">
-              <MapPin size={20} className="contact-info__icon" />
-              <div>
-                <p className="contact-info__label">Service Area</p>
-                <p className="contact-info__value">Nationwide — USA</p>
-              </div>
-            </div>
-          </aside>
         </div>
       </SectionWrapper>
     </div>

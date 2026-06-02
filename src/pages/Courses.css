@@ -1,0 +1,72 @@
+/* ============================================
+   COURSES PAGE — UNIQUE STYLES
+   ============================================ */
+
+/* ---- Hero: Warm amber accent ---- */
+.courses-hero {
+  position: relative;
+  padding-top: calc(var(--nav-height) + var(--space-16));
+  padding-bottom: var(--space-16);
+  background: linear-gradient(180deg, #FFFBEB 0%, var(--color-bg) 100%);
+  overflow: hidden;
+}
+
+.courses-hero__inner {
+  position: relative;
+  z-index: var(--z-base);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.courses-hero__title {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-text);
+  line-height: var(--line-height-tight);
+}
+
+.courses-hero__title .text-gradient {
+  color: var(--color-accent);
+}
+
+.courses-hero__subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  max-width: 600px;
+}
+
+/* Stats row */
+.courses-hero__stats {
+  display: flex;
+  gap: var(--space-10);
+  margin-top: var(--space-4);
+}
+
+.courses-hero__stat {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+
+.courses-hero__stat svg {
+  color: var(--color-accent);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .courses-hero__title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .courses-hero__stats {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+}

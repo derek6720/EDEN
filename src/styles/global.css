@@ -116,10 +116,7 @@ input, textarea, select {
 
 /* ---- Utility: Text ---- */
 .text-gradient {
-  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary-light));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-primary);
 }
 
 .text-muted {

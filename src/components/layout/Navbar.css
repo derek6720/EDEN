@@ -9,10 +9,10 @@
   right: 0;
   height: var(--nav-height);
   z-index: var(--z-sticky);
-  transition: background-color var(--transition-base),
-              box-shadow var(--transition-base),
-              backdrop-filter var(--transition-base);
-  background-color: transparent;
+  transition: box-shadow var(--transition-base);
+  background-color: rgba(var(--color-bg-rgb), 0.98);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .navbar--scrolled {

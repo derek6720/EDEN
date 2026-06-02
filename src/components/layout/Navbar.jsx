@@ -9,6 +9,7 @@ import './Navbar.css';
  * Responsive hamburger menu on mobile.
  */
 const navLinks = [
+  { to: '/', label: 'Home' },
   { to: '/business-loans', label: 'Business Loans' },
   { to: '/business-funding', label: 'Business Funding' },
   { to: '/credit-repair', label: 'Credit Repair' },
@@ -51,6 +52,7 @@ export default function Navbar() {
             <NavLink
               key={link.to}
               to={link.to}
+              end={link.to === '/'}
               className={({ isActive }) =>
                 `navbar__link ${isActive ? 'navbar__link--active' : ''}`
               }
@@ -87,6 +89,7 @@ export default function Navbar() {
             <NavLink
               key={link.to}
               to={link.to}
+              end={link.to === '/'}
               className={({ isActive }) =>
                 `navbar__mobile-link ${isActive ? 'navbar__mobile-link--active' : ''}`
               }

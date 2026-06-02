@@ -1,0 +1,219 @@
+/* ============================================
+   CREDIT REPAIR PAGE — UNIQUE STYLES
+   ============================================ */
+
+/* ---- Hero: Split with score visual ---- */
+.credit-hero {
+  position: relative;
+  padding-top: calc(var(--nav-height) + var(--space-16));
+  padding-bottom: var(--space-16);
+  background: var(--color-bg);
+  overflow: hidden;
+}
+
+/* Subtle green tint at top */
+.credit-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(16, 185, 129, 0.03);
+  pointer-events: none;
+}
+
+.credit-hero__inner {
+  position: relative;
+  z-index: var(--z-base);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.credit-hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.credit-hero__eyebrow {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-success);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wider);
+}
+
+.credit-hero__title {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-text);
+  line-height: var(--line-height-tight);
+}
+
+.credit-hero__subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  max-width: 520px;
+}
+
+/* ---- Score Ring Visual ---- */
+.credit-hero__score-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.credit-hero__score-ring {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  background: var(--color-bg-alt);
+  border: 6px solid rgba(16, 185, 129, 0.15);
+  box-shadow: 0 0 0 20px rgba(16, 185, 129, 0.04),
+              0 20px 60px rgba(0, 0, 0, 0.06);
+}
+
+/* Animated arc — decorative progress indicator */
+.credit-hero__score-ring::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 6px solid transparent;
+  border-top-color: var(--color-success);
+  border-right-color: var(--color-success);
+  transform: rotate(45deg);
+}
+
+.credit-hero__score-number {
+  font-size: var(--font-size-6xl);
+  font-weight: var(--font-weight-black);
+  color: var(--color-success);
+  line-height: 1;
+}
+
+.credit-hero__score-plus {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-success);
+}
+
+.credit-hero__score-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  text-align: center;
+  max-width: 160px;
+}
+
+/* ---- Process: Horizontal connected steps ---- */
+.credit-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+  position: relative;
+}
+
+/* Connector line behind steps */
+.credit-steps::before {
+  content: '';
+  position: absolute;
+  top: 36px;
+  left: 60px;
+  right: 60px;
+  height: 2px;
+  background: var(--color-border);
+}
+
+.credit-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-4);
+  position: relative;
+}
+
+.credit-step__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-bg);
+  border: 2px solid var(--color-success);
+  color: var(--color-success);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  z-index: var(--z-base);
+}
+
+.credit-step__icon {
+  color: var(--color-success);
+  margin-bottom: var(--space-1);
+}
+
+.credit-step__title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.credit-step__text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .credit-hero__inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .credit-hero__content {
+    align-items: center;
+  }
+
+  .credit-hero__score-ring {
+    width: 220px;
+    height: 220px;
+  }
+
+  .credit-hero__score-number {
+    font-size: var(--font-size-5xl);
+  }
+
+  .credit-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .credit-steps::before {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .credit-hero__title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .credit-steps {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
