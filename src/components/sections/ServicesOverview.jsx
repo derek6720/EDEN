@@ -16,17 +16,17 @@ const services = [
   },
   {
     icon: <TrendingUp size={28} />,
-    title: 'Business Funding',
+    title: 'Business Funding Qualifications',
     description:
-      'Explore diverse funding options including grants, lines of credit, and alternative financing solutions tailored for entrepreneurs.',
-    to: '/business-funding',
+      'Explore diverse funding options, from grants to lines of credit, and check the requirements to qualify your business for same-day capital.',
+    to: '/business-funding-qualifications',
   },
   {
     icon: <ShieldCheck size={28} />,
-    title: 'Credit Repair',
+    title: 'Credit Consulting',
     description:
-      'Build a strong credit foundation. We help you improve your credit profile and create a pathway to better funding opportunities.',
-    to: '/credit-repair',
+      'Build a strong credit foundation. We help you optimize your credit profile and create a pathway to better funding opportunities.',
+    to: '/credit-consulting',
   },
 ];
 

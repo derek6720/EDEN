@@ -18,12 +18,11 @@ const QUALIFICATIONS = [
 ];
 
 const REQUIRED_DOCUMENTS = [
-  { label: 'Three months business bank statements', required: true },
-  { label: 'Proof of ownership (EIN Letter)', required: true },
-  { label: 'Social Security Number', required: true },
-  { label: 'Government-issued ID', required: true },
-  { label: 'Latest business tax return', required: false },
-  { label: 'Latest credit card transaction report (if applicable)', required: false },
+  { label: '3 months business bank statements', required: true },
+  { label: 'PROOF of ownership ID', required: true },
+  { label: 'Social Security Number (Social)', required: true },
+  { label: 'Latest business tax return (if you have it, not required)', required: false },
+  { label: 'POS system latest transaction report (if you have a POS system)', required: false },
 ];
 
 export default function BusinessOnboarding() {
@@ -276,33 +275,36 @@ export default function BusinessOnboarding() {
               <div className="onboarding-form__upload-grid">
                 <label className="onboarding-form__upload-item">
                   <Upload size={20} />
-                  <span>Bank Statements (3 months)</span>
+                  <span>Bank Statements (3 months) *</span>
                   <input
                     type="file"
                     accept=".pdf,.jpg,.png"
                     multiple
                     className="onboarding-form__upload-input"
                     aria-label="Upload Bank Statements"
+                    required
                   />
                 </label>
                 <label className="onboarding-form__upload-item">
                   <Upload size={20} />
-                  <span>EIN Letter</span>
+                  <span>PROOF of ownership ID *</span>
                   <input
                     type="file"
                     accept=".pdf,.jpg,.png"
                     className="onboarding-form__upload-input"
-                    aria-label="Upload EIN Letter"
+                    aria-label="Upload Proof of Ownership ID"
+                    required
                   />
                 </label>
                 <label className="onboarding-form__upload-item">
                   <Upload size={20} />
-                  <span>Government ID</span>
+                  <span>Social Security Card/ID *</span>
                   <input
                     type="file"
                     accept=".pdf,.jpg,.png"
                     className="onboarding-form__upload-input"
-                    aria-label="Upload Government ID"
+                    aria-label="Upload Social Security ID"
+                    required
                   />
                 </label>
                 <label className="onboarding-form__upload-item">
@@ -313,6 +315,16 @@ export default function BusinessOnboarding() {
                     accept=".pdf,.jpg,.png"
                     className="onboarding-form__upload-input"
                     aria-label="Upload Tax Return"
+                  />
+                </label>
+                <label className="onboarding-form__upload-item">
+                  <Upload size={20} />
+                  <span>POS Transaction Report (Optional)</span>
+                  <input
+                    type="file"
+                    accept=".pdf,.jpg,.png"
+                    className="onboarding-form__upload-input"
+                    aria-label="Upload POS Transaction Report"
                   />
                 </label>
               </div>

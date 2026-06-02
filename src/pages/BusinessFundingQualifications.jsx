@@ -1,11 +1,11 @@
 import SectionWrapper from '../components/ui/SectionWrapper';
 import Button from '../components/ui/Button';
 import { Landmark, HandCoins, Handshake, ShieldCheck, ArrowRight } from 'lucide-react';
-import './BusinessFunding.css';
+import './BusinessFundingQualifications.css';
 
 /**
- * Business Funding dedicated page.
- * Includes funding pathways, qualification requirements, and onboarding link.
+ * Business Funding Qualifications dedicated page.
+ * Includes same-day funding callout, qualification requirements, and onboarding link.
  */
 
 const QUALIFICATIONS = [
@@ -16,16 +16,15 @@ const QUALIFICATIONS = [
   'If you have a website, please attach it',
 ];
 
-export default function BusinessFunding() {
+export default function BusinessFundingQualifications() {
   return (
-    <div className="page page--business-funding">
+    <div className="page page--business-funding-qualifications">
       {/* ---- UNIQUE HERO: Light with funding pathway badges ---- */}
       <section className="funding-hero" id="funding-hero">
         <div className="funding-hero__inner container">
-          <h1 className="funding-hero__title">Business Funding</h1>
+          <h1 className="funding-hero__title">Business Funding Qualifications</h1>
           <p className="funding-hero__subtitle">
-            Explore diverse funding options including grants, lines of credit,
-            and alternative financing solutions tailored to your goals.
+            Explore diverse funding options and check the requirements to qualify your business for same-day capital.
           </p>
 
           <div className="funding-hero__paths">
@@ -46,6 +45,25 @@ export default function BusinessFunding() {
           </div>
         </div>
       </section>
+
+      {/* ---- SAME-DAY FUNDING CALLOUT BANNER ---- */}
+      <SectionWrapper id="same-day-funding-callout" bg="transparent">
+        <div className="funding-callout-card">
+          <div className="funding-callout-card__content">
+            <h2 className="funding-callout-card__title">
+              Same-Day Funding
+            </h2>
+            <p className="funding-callout-card__text">
+              We offer same-day funding of <span className="text-gradient font-bold">up to three times (3x) your average monthly income</span>. Check qualifications and submit your intake form to get started.
+            </p>
+          </div>
+          <div className="funding-callout-card__action">
+            <Button variant="primary" size="lg" href="/onboarding/business">
+              Apply Here <ArrowRight size={18} style={{ marginLeft: '8px' }} />
+            </Button>
+          </div>
+        </div>
+      </SectionWrapper>
 
       {/* ---- Qualifications ---- */}
       <SectionWrapper id="funding-qualifications" bg="surface">
@@ -83,7 +101,7 @@ export default function BusinessFunding() {
               <h3 className="funding-timeline__title">Business Grants</h3>
               <p className="funding-timeline__text">
                 Free money that doesn&apos;t need to be repaid. We help you find and
-                apply for grants you actually qualify for — including same-day options.
+                apply for grants you qualify for — including same-day options.
               </p>
             </div>
           </div>
@@ -94,8 +112,7 @@ export default function BusinessFunding() {
             <div className="funding-timeline__content">
               <h3 className="funding-timeline__title">Revenue-Based Financing</h3>
               <p className="funding-timeline__text">
-                Get funded based on your business revenue, not your credit score.
-                Flexible repayment that scales with your income.
+                Get funded based on your business revenue. Flexible same-day repayment options that scale with your monthly sales volume.
               </p>
             </div>
           </div>

@@ -31,9 +31,9 @@ import './Footer.css';
  */
 const serviceLinks = [
   { to: '/business-loans', label: 'Business Loans' },
-  { to: '/business-funding', label: 'Business Funding' },
-  { to: '/credit-repair', label: 'Credit Repair' },
-  { to: '/courses', label: 'Courses' },
+  { to: '/credit-consulting', label: 'Credit Consulting' },
+  { to: '/courses', label: 'Programs' },
+  { to: '/business-funding-qualifications', label: 'Business Funding Qualifications' },
 ];
 
 const companyLinks = [

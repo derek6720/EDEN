@@ -192,3 +192,61 @@
     height: 32px;
   }
 }
+
+/* ---- Same-Day Funding Callout Card ---- */
+.funding-callout-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-8) var(--space-10);
+  background: linear-gradient(135deg, rgba(var(--color-primary-rgb), 0.08) 0%, rgba(var(--color-dark-rgb), 0.4) 100%);
+  border: 1px solid rgba(var(--color-gold-rgb), 0.3);
+  border-radius: var(--radius-xl);
+  max-width: var(--container-md);
+  margin: 0 auto;
+  box-shadow: var(--shadow-gold-glow-sm);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.funding-callout-card__content {
+  flex: 1;
+}
+
+.funding-callout-card__title {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-2);
+  color: var(--color-gold);
+}
+
+.funding-callout-card__text {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+.funding-callout-card__action {
+  flex-shrink: 0;
+}
+
+/* Responsive Callout Card */
+@media (max-width: 768px) {
+  .funding-callout-card {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--space-6) var(--space-6);
+    gap: var(--space-6);
+  }
+  
+  .funding-callout-card__action {
+    width: 100%;
+  }
+
+  .funding-callout-card__action > a {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
