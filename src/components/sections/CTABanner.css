@@ -5,7 +5,7 @@
 .cta-banner {
   position: relative;
   padding: var(--space-20) var(--space-6);
-  background-color: var(--color-primary);
+  background-color: var(--color-dark-surface);
   overflow: hidden;
 }
 

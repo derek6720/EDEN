@@ -1,0 +1,150 @@
+/* ============================================
+   SHARED PAGE LAYOUT UTILITIES
+   Used across dedicated pages for consistent layout.
+   ============================================ */
+
+/* ---- Two-Column Split ---- */
+.page-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.page-two-col__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.page-two-col__content h2 {
+  margin-bottom: var(--space-2);
+}
+
+.page-two-col__content p {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+.page-two-col__media {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.page-two-col__image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* ---- Centered Section Header ---- */
+.section-header-center {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.section-header-center p {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: var(--space-4) auto 0;
+}
+
+/* ---- Grid Layouts ---- */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+/* ---- Feature List ---- */
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  list-style: none;
+  padding: 0;
+  margin: var(--space-2) 0;
+}
+
+.feature-list__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+}
+
+.feature-list__icon {
+  color: var(--color-secondary);
+  flex-shrink: 0;
+}
+
+/* ---- Step Cards ---- */
+.step-card {
+  position: relative;
+  padding: var(--space-8);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.step-card__number {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-4);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-extrabold);
+  color: rgba(var(--color-primary-rgb), 0.08);
+  line-height: 1;
+}
+
+.step-card__icon {
+  color: var(--color-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.step-card__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  margin-bottom: var(--space-3);
+}
+
+.step-card__text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-two-col {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
