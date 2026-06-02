@@ -11,12 +11,11 @@ import './Navbar.css';
  */
 const navLinks = [
   { to: '/', label: 'Home' },
-  { to: '/business-loans', label: 'Business Loans' },
+  { to: '/business-funding', label: 'Business Funding' },
   { to: '/credit-consulting', label: 'Credit Consulting' },
   { to: '/courses', label: 'Programs' },
   { to: '/testimonials', label: 'Testimonials' },
   { to: '/contact', label: 'Contact Us' },
-  { to: '/business-funding-qualifications', label: 'Business Funding Qualifications' },
 ];
 
 export default function Navbar() {

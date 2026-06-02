@@ -128,8 +128,7 @@ export default function Contact() {
                 </label>
                 <select id="contact-service" className="contact-form__input">
                   <option value="">Select a service...</option>
-                  <option value="business-loans">Business Loans</option>
-                  <option value="business-funding-qualifications">Business Funding Qualifications</option>
+                  <option value="business-funding">Business Funding</option>
                   <option value="credit-consulting">Credit Consulting</option>
                   <option value="courses">Courses</option>
                   <option value="other">Other</option>

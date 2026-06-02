@@ -30,10 +30,9 @@ import './Footer.css';
  * Four-column layout: Brand, Services, Company, Newsletter.
  */
 const serviceLinks = [
-  { to: '/business-loans', label: 'Business Loans' },
+  { to: '/business-funding', label: 'Business Funding' },
   { to: '/credit-consulting', label: 'Credit Consulting' },
   { to: '/courses', label: 'Programs' },
-  { to: '/business-funding-qualifications', label: 'Business Funding Qualifications' },
 ];
 
 const companyLinks = [
