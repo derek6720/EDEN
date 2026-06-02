@@ -80,7 +80,7 @@ export default function Footer() {
               <InstagramIcon size={18} />
             </a>
             <a
-              href="mailto:eden@prosperitygroupllc.net"
+              href="mailto:Eden@ProsperityGroupLLC.net"
               className="footer__social-link"
               aria-label="Email"
             >

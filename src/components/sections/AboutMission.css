@@ -21,6 +21,7 @@
   overflow: visible;
 }
 
+
 .about-mission__portrait img {
   position: relative;
   width: clamp(560px, 56vw, 720px);
@@ -36,9 +37,9 @@
           drop-shadow(0 -1px 0 rgba(245, 222, 132, 0.78))
           drop-shadow(0 0 14px rgba(245, 222, 132, 0.52))
           drop-shadow(0 0 36px rgba(201, 168, 76, 0.4));
+  -webkit-mask-image: radial-gradient(ellipse at 75% 30%, black 40%, transparent 90%);
+  mask-image: radial-gradient(ellipse at 75% 30%, black 40%, transparent 90%);
 }
-
-/* Prevent horizontal overflow from large portrait image */
 .about-mission__image-col {
   overflow: hidden;
 }

@@ -44,13 +44,13 @@ export default function Contact() {
 
           <div className="contact-hero__cards">
             <a
-              href="mailto:eden@prosperitygroupllc.net"
+              href="mailto:Eden@ProsperityGroupLLC.net"
               className="contact-hero__card"
             >
               <Mail size={24} className="contact-hero__card-icon" />
               <span className="contact-hero__card-label">Email</span>
               <span className="contact-hero__card-value">
-                eden@prosperitygroupllc.net
+                Eden@ProsperityGroupLLC.net
               </span>
             </a>
 
