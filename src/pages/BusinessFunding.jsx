@@ -122,10 +122,6 @@ export default function BusinessFunding() {
                 <span>No Minimum Credit Score</span>
               </li>
             </ul>
-
-            <Button variant="primary" size="lg" href="/onboarding/business">
-              Apply Now
-            </Button>
           </div>
 
           <div className="page-two-col__media">
