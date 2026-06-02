@@ -10,7 +10,7 @@
   height: 100%;
   pointer-events: none;
   z-index: var(--z-vine);
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* ---- SVG Vines ---- */
@@ -19,6 +19,7 @@
   top: 0;
   height: 100%;
   width: 112px;
+  overflow: visible;
   transition: opacity 0.3s ease;
 }
 
@@ -27,7 +28,7 @@
 }
 
 .vine-svg--right {
-  right: 0;
+  right: -8px;
   transform: scaleX(-1);
 }
 

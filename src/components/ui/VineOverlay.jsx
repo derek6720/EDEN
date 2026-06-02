@@ -80,6 +80,15 @@ export default function VineOverlay() {
           strokeLinecap="round"
           opacity="0.32"
         />
+        {/* Tertiary vine tendril */}
+        <path
+          className="vine-path"
+          d="M70 1640 C108 1580, 118 1510, 96 1420 C74 1330, 116 1240, 90 1120 C64 1000, 116 900, 92 780 C68 660, 104 560, 84 440"
+          stroke="var(--color-gold-dark)"
+          strokeWidth="2.25"
+          strokeLinecap="round"
+          opacity="0.22"
+        />
 
         {/* Leaves along left vine */}
         <g className="vine-leaves">
@@ -95,7 +104,7 @@ export default function VineOverlay() {
       <svg
         ref={rightVineRef}
         className="vine-svg vine-svg--right"
-        viewBox="0 0 150 2000"
+        viewBox="0 0 180 2000"
         preserveAspectRatio="none"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -103,7 +112,7 @@ export default function VineOverlay() {
         {/* Main vine trunk */}
         <path
           className="vine-path"
-          d="M64 2000 C64 1800, 104 1700, 74 1500 C44 1300, 118 1200, 88 1000 C58 800, 112 700, 84 500 C56 300, 102 200, 76 0"
+          d="M64 2000 C64 1800, 28 1700, 54 1500 C80 1300, 20 1200, 46 1000 C72 800, 24 700, 52 500 C80 300, 34 200, 56 0"
           stroke="var(--color-silver)"
           strokeWidth="4"
           strokeLinecap="round"
@@ -112,28 +121,29 @@ export default function VineOverlay() {
         {/* Secondary vine tendril */}
         <path
           className="vine-path"
-          d="M78 1800 C108 1750, 132 1700, 116 1600 C100 1500, 126 1400, 108 1300 C90 1200, 132 1100, 116 1000"
+          d="M54 1800 C26 1750, 8 1700, 22 1600 C36 1500, 12 1400, 28 1300 C44 1200, 8 1100, 24 1000"
           stroke="var(--color-silver)"
           strokeWidth="2.75"
           strokeLinecap="round"
           opacity="0.18"
         />
+        {/* Tertiary vine tendril */}
+        <path
+          className="vine-path"
+          d="M70 1640 C108 1580, 118 1510, 96 1420 C74 1330, 116 1240, 90 1120 C64 1000, 116 900, 92 780 C68 660, 104 560, 84 440"
+          stroke="var(--color-silver)"
+          strokeWidth="2.25"
+          strokeLinecap="round"
+          opacity="0.14"
+        />
 
-        {/* Leaves along right vine — silver */}
+        {/* Leaves along right vine */}
         <g className="vine-leaves">
-          <path d="M72 1700 C90 1690, 105 1680, 100 1660 C95 1640, 80 1650, 72 1670 Z" fill="var(--color-silver)" opacity="0.15" className="leaf-sway" style={{ animationDelay: '0.3s' }} />
-          <path d="M85 1400 C102 1385, 115 1370, 108 1350 C101 1330, 90 1345, 85 1365 Z" fill="var(--color-silver)" opacity="0.12" className="leaf-sway" style={{ animationDelay: '0.8s' }} />
-          <path d="M78 1100 C95 1085, 110 1070, 102 1050 C94 1030, 82 1050, 78 1070 Z" fill="var(--color-silver)" opacity="0.1" className="leaf-sway" style={{ animationDelay: '1.3s' }} />
-          <path d="M90 800 C105 785, 117 770, 110 750 C103 730, 92 748, 90 768 Z" fill="var(--color-silver)" opacity="0.08" className="leaf-sway" style={{ animationDelay: '1.8s' }} />
-        </g>
-
-        {/* Second leaf column to widen the right edge texture. */}
-        <g className="vine-leaves vine-leaves--right-secondary">
-          <path d="M46 1760 C28 1748, 22 1728, 32 1708 C42 1688, 54 1706, 52 1728 Z" fill="var(--color-silver)" opacity="0.13" className="leaf-sway" style={{ animationDelay: '0.6s' }} />
-          <path d="M36 1500 C20 1484, 18 1462, 30 1444 C42 1426, 52 1448, 48 1468 Z" fill="var(--color-silver)" opacity="0.11" className="leaf-sway" style={{ animationDelay: '1.1s' }} />
-          <path d="M48 1240 C30 1228, 22 1208, 32 1188 C42 1168, 56 1188, 54 1210 Z" fill="var(--color-silver)" opacity="0.1" className="leaf-sway" style={{ animationDelay: '1.6s' }} />
-          <path d="M34 960 C18 944, 18 922, 30 904 C42 886, 52 908, 48 928 Z" fill="var(--color-silver)" opacity="0.09" className="leaf-sway" style={{ animationDelay: '2.1s' }} />
-          <path d="M48 620 C30 608, 22 588, 32 568 C42 548, 56 568, 54 590 Z" fill="var(--color-silver)" opacity="0.08" className="leaf-sway" style={{ animationDelay: '2.6s' }} />
+          <path d="M48 1700 C30 1690, 15 1680, 20 1660 C25 1640, 40 1650, 48 1670 Z" fill="var(--color-silver)" opacity="0.15" className="leaf-sway" />
+          <path d="M35 1400 C18 1385, 5 1370, 12 1350 C19 1330, 30 1345, 35 1365 Z" fill="var(--color-silver)" opacity="0.12" className="leaf-sway" style={{ animationDelay: '0.5s' }} />
+          <path d="M42 1100 C25 1085, 10 1070, 18 1050 C26 1030, 38 1050, 42 1070 Z" fill="var(--color-silver)" opacity="0.1" className="leaf-sway" style={{ animationDelay: '1s' }} />
+          <path d="M30 800 C15 785, 3 770, 10 750 C17 730, 28 748, 30 768 Z" fill="var(--color-silver)" opacity="0.08" className="leaf-sway" style={{ animationDelay: '1.5s' }} />
+          <path d="M45 500 C28 490, 15 475, 22 455 C29 435, 40 452, 45 470 Z" fill="var(--color-silver)" opacity="0.07" className="leaf-sway" style={{ animationDelay: '2s' }} />
         </g>
       </svg>
 
